@@ -34,6 +34,10 @@ select name,city,commercial_company_name from res_partner where city='Tracy' ord
 
 ## Apartado 5
 
+```bash
+select r.name,a.name,a.invoice_date,a.amount_untaxed_signed from res_partner r left join account_move a on a.partner_id=r.id where a.move_type='in_refund'
+```
+
 ## Apartado 6 
 
 ## Apartado 7
