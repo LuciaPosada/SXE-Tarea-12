@@ -28,6 +28,10 @@ select * from EmpresasFCT order by fechacontacto desc;
 
 ## Apartado 4 
 
+```bash
+select name,city,commercial_company_name from res_partner where city='Tracy' order by commercial_company_name asc;
+```
+
 ## Apartado 5
 
 ## Apartado 6 
