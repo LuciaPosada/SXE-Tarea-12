@@ -20,7 +20,11 @@ insert into EmpresasFCT values (DEFAULT,'ZARA',TRUE,1,'2025-01-05');
 insert into EmpresasFCT values (DEFAULT,'Atlus',FALSE,0,'2025-01-17');
 ```
 
-## Apartado 3 
+## Apartado 3
+
+```bash
+select * from EmpresasFCT order by fechacontacto desc;
+```
 
 ## Apartado 4 
 
