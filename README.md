@@ -1,7 +1,7 @@
 ## Apartado 1 
 
 ```bash
-CREATE TABLE EmpresaFCT (
+CREATE TABLE EmpresasFCT (
 idEmpresa SERIAL PRIMARY KEY,
 nombre VARCHAR(40),
 quiereAlumnos BOOLEAN,
