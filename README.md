@@ -2,18 +2,18 @@
 
 ```bash
 CREATE TABLE EmpresasFCT (
-idEmpresa SERIAL PRIMARY KEY,
-nombre VARCHAR(40),
-quiereAlumnos BOOLEAN,
-numAlumnos INTEGER,
-fechaContacto DATE
+  idEmpresa SERIAL PRIMARY KEY,
+  nombre VARCHAR(40),
+  quiereAlumnos BOOLEAN,
+  numAlumnos INTEGER,
+  fechaContacto DATE
 );
 ```
 
 ## Apartado 2 
 
 ```bash
-insert into EmpresasFCT values ('PrimoPlus',FALSE,0,'2025-01-30');
+insert into EmpresasFCT values (DEFAULT,'PrimoPlus',FALSE,0,'2025-01-30');
 ```
 
 ## Apartado 3 
