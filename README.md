@@ -50,5 +50,9 @@ select r.name,a.name,a.amount_untaxed_signed from res_partner r left join accoun
 
 ## Apartado 7
 
+```bash
+UPDATE res_partner SET email = replace(email, '@bilbao.example.com', '@bilbao.bizkaia.neus');
+```
+
 ## Apartado 8 
 
