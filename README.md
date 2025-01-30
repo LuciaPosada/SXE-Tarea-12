@@ -12,6 +12,10 @@ fechaContacto DATE
 
 ## Apartado 2 
 
+```bash
+insert into EmpresasFCT values ('PrimoPlus',FALSE,0,'2025-01-30');
+```
+
 ## Apartado 3 
 
 ## Apartado 4 
