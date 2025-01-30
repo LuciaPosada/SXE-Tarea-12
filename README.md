@@ -15,7 +15,7 @@ CREATE TABLE EmpresasFCT (
 ```bash
 insert into EmpresasFCT values (DEFAULT,'PrimoPlus',FALSE,0,'2025-01-30');
 insert into EmpresasFCT values (DEFAULT,'Microsoft',TRUE,3,'2025-01-27');
-insert into EmpresasFCT values (DEFAULT,'Nintendo',TRUE,1,'204-12-29');
+insert into EmpresasFCT values (DEFAULT,'Nintendo',TRUE,1,'2024-12-29');
 insert into EmpresasFCT values (DEFAULT,'ZARA',TRUE,1,'2025-01-05');
 insert into EmpresasFCT values (DEFAULT,'Atlus',FALSE,0,'2025-01-17');
 ```
