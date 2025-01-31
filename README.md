@@ -56,3 +56,7 @@ UPDATE res_partner SET email = replace(email, '@bilbao.example.com', '@bilbao.bi
 
 ## Apartado 8 
 
+```bash
+DELETE from res_partner where commercial_company_name='Ready Mat';
+```
+
