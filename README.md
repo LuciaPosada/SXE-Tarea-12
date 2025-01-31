@@ -53,11 +53,10 @@ select r.name,a.name,a.invoice_date,a.amount_untaxed_signed from res_partner r l
 ## Apartado 6 
 
 ```bash
-select r.name,a.name,a.amount_untaxed_signed from res_partner r left join account_move a on a.partner_id=r.id where a.move_type='out_invoice' GROUP BY r.name,a.name,a.amount_untaxed_signed HAVING COUNT(*) > (
-  SELECT COUNT(*) 
-    FROM res_partner
-    GROUP BY name
-  );
+select r.name,a.name,a.amount_untaxed_signed
+from res_partner r join account_move a on a.partner_id=r.id 
+where a.move_type='out_invoice' group by r.name,a.name,a.amount_untaxed_signed 
+having count(a.id) > 2
 ```
 
 ## Apartado 7
