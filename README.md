@@ -61,12 +61,21 @@ SELECT name,city,commercial_company_name from res_partner where city='Tracy' ord
 
 ## Apartado 5
 
-****
+**Obtén un listado de empresas proveedoras, que han emitido algún reembolso, con la siguiente información: nombre de empresa, número de factura, fecha de la factura, total factura SIN impuestos.
+Ordenadas por fecha de factura de modo que la primera sea la más reciente.**
 
 Consulta:
 
 ```bash
-SELECT r.name,a.name,a.invoice_date,a.amount_untaxed_signed from res_partner r left join account_move a on a.partner_id=r.id where a.move_type='in_refund' order by a.invoice_date desc;
+SELECT r.name,
+       a.name,
+       a.invoice_date,
+       a.amount_untaxed_signed
+from res_partner r
+left join account_move a
+       on a.partner_id=r.id
+       where a.move_type='in_refund'
+       order by a.invoice_date desc;
 ```
 
 > Resultado de la querys de este apartado↓
