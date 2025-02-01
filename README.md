@@ -1,12 +1,17 @@
 ## Apartado 1 
 
+
+**Elabora y ejecuta una sentencia que cree una tabla llamada “EmpresasFCT“con los siguientes campos: idEmpresa, nombre, quiereAlumnos, numAlumnos y fechaContacto**
+
+Consulta:
+
 ```bash
 CREATE TABLE EmpresasFCT (
-  idEmpresa SERIAL PRIMARY KEY,
-  nombre VARCHAR(40),
-  quiereAlumnos BOOLEAN,
-  numAlumnos INTEGER,
-  fechaContacto DATE
+    idEmpresa SERIAL PRIMARY KEY,
+    nombre VARCHAR(40),
+    quiereAlumnos BOOLEAN,
+    numAlumnos INTEGER,
+    fechaContacto DATE
 );
 ```
 
@@ -23,7 +28,7 @@ insert into EmpresasFCT values (DEFAULT,'Atlus',FALSE,0,'2025-01-17');
 ## Apartado 3
 
 ```bash
-select * from EmpresasFCT order by fechacontacto desc;
+SELECT * from EmpresasFCT order by fechacontacto desc;
 ```
 
 > Resultado de las querys del apartado 1,2 y 3↓
@@ -33,7 +38,7 @@ select * from EmpresasFCT order by fechacontacto desc;
 ## Apartado 4 
 
 ```bash
-select name,city,commercial_company_name from res_partner where city='Tracy' order by commercial_company_name asc;
+SELECT name,city,commercial_company_name from res_partner where city='Tracy' order by commercial_company_name asc;
 ```
 
 > Resultado de la querys de este apartado↓
@@ -43,7 +48,7 @@ select name,city,commercial_company_name from res_partner where city='Tracy' ord
 ## Apartado 5
 
 ```bash
-select r.name,a.name,a.invoice_date,a.amount_untaxed_signed from res_partner r left join account_move a on a.partner_id=r.id where a.move_type='in_refund' order by a.invoice_date desc;
+SELECT r.name,a.name,a.invoice_date,a.amount_untaxed_signed from res_partner r left join account_move a on a.partner_id=r.id where a.move_type='in_refund' order by a.invoice_date desc;
 ```
 
 > Resultado de la querys de este apartado↓
@@ -53,7 +58,7 @@ select r.name,a.name,a.invoice_date,a.amount_untaxed_signed from res_partner r l
 ## Apartado 6 
 
 ```bash
-select r.name,a.name,a.amount_untaxed_signed
+SELECT r.name,a.name,a.amount_untaxed_signed
 from res_partner r join account_move a on a.partner_id=r.id 
 where a.move_type='out_invoice' group by r.name,a.name,a.amount_untaxed_signed 
 having count(a.id) > 2
