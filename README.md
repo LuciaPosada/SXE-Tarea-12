@@ -115,6 +115,6 @@ UPDATE res_partner set email = replace(email, '@bilbao.example.com', '@bilbao.bi
 Consulta:
 
 ```bash
-DELETE from res_partner where commercial_company_name='Ready Mat';
+DELETE from res_partner where commercial_company_name='Ready Mat' and is_company=FALSE;
 ```
 
