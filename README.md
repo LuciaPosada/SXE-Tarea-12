@@ -1,7 +1,7 @@
 ## Apartado 1 
 
 
-**Elabora y ejecuta una sentencia que cree una tabla llamada “EmpresasFCT“con los siguientes campos: idEmpresa, nombre, quiereAlumnos, numAlumnos y fechaContacto**
+**Elabora y ejecuta una sentencia que cree una tabla llamada “EmpresasFCT“con los siguientes campos: idEmpresa, nombre, quiereAlumnos, numAlumnos y fechaContacto.**
 
 Consulta:
 
@@ -17,6 +17,10 @@ CREATE TABLE EmpresasFCT (
 
 ## Apartado 2 
 
+**Inserta 5 registros inventados en la tabla a través de una sentencia SQL.**
+
+Consulta:
+
 ```bash
 insert into EmpresasFCT values (DEFAULT,'PrimoPlus',FALSE,0,'2025-01-30');
 insert into EmpresasFCT values (DEFAULT,'Microsoft',TRUE,3,'2025-01-27');
@@ -26,6 +30,10 @@ insert into EmpresasFCT values (DEFAULT,'Atlus',FALSE,0,'2025-01-17');
 ```
 
 ## Apartado 3
+
+**Realiza una consulta donde se muestren todos los datos de la tabla EmpresasFCT ordenados por fechaContacto, de modo que en la primera fila salga el que tenga fecha más reciente.**
+
+Consulta:
 
 ```bash
 SELECT * from EmpresasFCT order by fechacontacto desc;
