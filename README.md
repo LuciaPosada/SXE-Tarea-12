@@ -31,7 +31,7 @@ insert into EmpresasFCT values (DEFAULT,'Atlus',FALSE,0,'2025-01-17');
 
 ## Apartado 3
 
-**Realiza una consulta donde se muestren todos los datos de la tabla EmpresasFCT ordenados por fechaContacto, de modo que en la primera fila salga el que tenga fecha más reciente.**
+**Muestra todos los datos de la tabla EmpresasFCT ordenados por fechaContacto, de modo que en la primera fila salga el que tenga fecha más reciente.**
 
 Consulta:
 
@@ -39,21 +39,31 @@ Consulta:
 SELECT * from EmpresasFCT order by fechacontacto desc;
 ```
 
-> Resultado de las querys del apartado 1,2 y 3↓
+> Resultado de las querys del apartado 1, 2 y 3 ↓
 >
 > ![Apartado 1_2_3](/img/apartado3.png)
 
 ## Apartado 4 
 
+[Pendiente de revision, falta una de las condiciones]
+
+Consulta:
+
 ```bash
 SELECT name,city,commercial_company_name from res_partner where city='Tracy' order by commercial_company_name asc;
 ```
+
+[Imagen invalida]
 
 > Resultado de la querys de este apartado↓
 >
 > ![Apartado 4](/img/apartado4.png)
 
 ## Apartado 5
+
+****
+
+Consulta:
 
 ```bash
 SELECT r.name,a.name,a.invoice_date,a.amount_untaxed_signed from res_partner r left join account_move a on a.partner_id=r.id where a.move_type='in_refund' order by a.invoice_date desc;
