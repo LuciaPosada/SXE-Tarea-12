@@ -48,9 +48,9 @@ SELECT * from EmpresasFCT order by fechacontacto desc;
 
 ## Apartado 4 
 
-[Pendiente de revision, falta una de las condiciones]
+**Obten un listado de todos los contactos de Odoo (no empresas) con la siguiente información: nombre, cuya ciudad sea Tracy, nombre comercial de la empresa. Ordenados alfabéticamente por el nombre comercial de la empresa**
 
-Consulta:
+Consulta: [Pendiente de revision]
 
 ```bash
 SELECT name,city,commercial_company_name from res_partner where city='Tracy' order by commercial_company_name asc;
@@ -87,7 +87,7 @@ left join account_move a
 
 ## Apartado 6 
 
-**Obtén un listado de empresas clientes, a las que se les ha emitido más de dos facturas de venta (solo venta) confirmadas, mostrando los siguientes datos: nombre de la empresa, número de facturas, total facturado SIN IMPUESTOS**
+**Obtén un listado de empresas clientes, a las que se les ha emitido más de dos facturas de venta (solo venta) confirmadas, mostrando los siguientes datos: nombre de la empresa, número de facturas, total facturado SIN IMPUESTOS.**
 
 Consulta:
 
@@ -100,12 +100,12 @@ having count(a.id) > 2
 
 ## Apartado 7
 
-**Crea una sentencia que actualice el correo de los contactos cuyo dominio es @bilbao.example.com a @bilbao.bizkaia.neus**
+**Crea una sentencia que actualice el correo de los contactos cuyo dominio es @bilbao.example.com a @bilbao.bizkaia.neus.**
 
 Consulta:
 
 ```bash
-UPDATE res_partner SET email = replace(email, '@bilbao.example.com', '@bilbao.bizkaia.neus');
+UPDATE res_partner set email = replace(email, '@bilbao.example.com', '@bilbao.bizkaia.neus');
 ```
 
 ## Apartado 8 
