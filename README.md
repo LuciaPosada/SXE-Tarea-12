@@ -1,5 +1,8 @@
-## Apartado 1 
+> [!WARNING]
+>
+> El apartado 4 tiene una consulta incompleta, la consulta del apatrtado 6 no da los resultados esperado y los apartados 7 y 8 les faltan sus respectivas imagenes
 
+## Apartado 1 
 
 **Elabora y ejecuta una sentencia que cree una tabla llamada “EmpresasFCT“con los siguientes campos: idEmpresa, nombre, quiereAlumnos, numAlumnos y fechaContacto.**
 
@@ -84,20 +87,32 @@ left join account_move a
 
 ## Apartado 6 
 
+**Obtén un listado de empresas clientes, a las que se les ha emitido más de dos facturas de venta (solo venta) confirmadas, mostrando los siguientes datos: nombre de la empresa, número de facturas, total facturado SIN IMPUESTOS**
+
+Consulta:
+
 ```bash
-SELECT r.name,a.name,a.amount_untaxed_signed
+SELECT r.name,a.name, sum(a.amount_untaxed_signed)
 from res_partner r join account_move a on a.partner_id=r.id 
-where a.move_type='out_invoice' group by r.name,a.name,a.amount_untaxed_signed 
+where a.move_type='out_invoice' group by r.name,a.name
 having count(a.id) > 2
 ```
 
 ## Apartado 7
+
+**Crea una sentencia que actualice el correo de los contactos cuyo dominio es @bilbao.example.com a @bilbao.bizkaia.neus**
+
+Consulta:
 
 ```bash
 UPDATE res_partner SET email = replace(email, '@bilbao.example.com', '@bilbao.bizkaia.neus');
 ```
 
 ## Apartado 8 
+
+**Crea una sentencia que elimine todos los contactos pertenecientes a la empresa “Ready Mat”, pero mantén la empresa.**
+
+Consulta:
 
 ```bash
 DELETE from res_partner where commercial_company_name='Ready Mat';
