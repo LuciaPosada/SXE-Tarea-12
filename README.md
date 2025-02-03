@@ -1,6 +1,3 @@
-> [!WARNING]
->
-> El apartado 4 tiene una consulta incompleta y al apartado 8 le faltan sus respectivas imagenes
 
 ## Apartado 1 
 
@@ -50,13 +47,17 @@ SELECT * from EmpresasFCT order by fechacontacto desc;
 
 **Obten un listado de todos los contactos de Odoo (no empresas) con la siguiente información: nombre, cuya ciudad sea Tracy, nombre comercial de la empresa. Ordenados alfabéticamente por el nombre comercial de la empresa**
 
-Consulta: [Pendiente de revision]
+Consulta: 
 
 ```bash
-SELECT name,city,commercial_company_name from res_partner where city='Tracy' order by commercial_company_name asc;
+SELECT name,
+       city,
+       commercial_company_name
+from res_partner
+       where city='Tracy'
+       and is_company=False 
+       order by commercial_company_name asc;
 ```
-
-[Imagen invalida]
 
 > Resultado de la querys de este apartado↓
 >
