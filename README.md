@@ -1,6 +1,6 @@
 > [!WARNING]
 >
-> El apartado 4 tiene una consulta incompleta, la consulta del apatrtado 6 no da los resultados esperado y al apartado 8 le faltan sus respectivas imagenes
+> El apartado 4 tiene una consulta incompleta y al apartado 8 le faltan sus respectivas imagenes
 
 ## Apartado 1 
 
