@@ -93,8 +93,8 @@ Consulta:
 
 ```bash
 SELECT r.name,
-       count(a.id) as num_facturas,
-       sum(a.amount_untaxed_signed) as total_sin_impuestos
+       count(distinct a.name) as num_facturas,
+       sum(distinct a.amount_untaxed_signed) as total_sin_impuestos
 from res_partner r 
 join account_move a
 on a.partner_id=r.id 
