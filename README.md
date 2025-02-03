@@ -92,10 +92,14 @@ left join account_move a
 Consulta:
 
 ```bash
-SELECT r.name,a.name, sum(a.amount_untaxed_signed)
-from res_partner r join account_move a on a.partner_id=r.id 
-where a.move_type='out_invoice' group by r.name,a.name
-having count(a.id) > 2
+SELECT r.name,
+	   count(a.id) as num_facturas,
+	   sum(a.amount_untaxed_signed) as total_sin_impuestos
+from res_partner r 
+join account_move a on a.partner_id=r.id 
+	   where a.move_type='out_invoice' 
+	   group by r.name
+	   having count(*) > 2
 ```
 
 ## Apartado 7
