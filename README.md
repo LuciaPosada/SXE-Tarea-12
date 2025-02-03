@@ -142,5 +142,5 @@ DELETE from res_partner where commercial_company_name='Ready Mat' and is_company
 > 
 > Resultado de la querys de este apartado ↓
 > 
-> ![Apartado 8](/img/apartado8.2.png)
+> ![Apartado 8](/img/apartado8.2.1.png)
 
