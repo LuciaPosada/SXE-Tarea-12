@@ -98,6 +98,7 @@ SELECT r.name,
 from res_partner r 
 join account_move a on a.partner_id=r.id 
 	   where a.move_type='out_invoice' 
+	   and state='posted'
 	   group by r.name
 	   having count(*) > 2
 ```
@@ -111,6 +112,14 @@ Consulta:
 ```bash
 UPDATE res_partner set email = replace(email, '@bilbao.example.com', '@bilbao.bizkaia.neus');
 ```
+
+> Entradas de la BD antes de la consulta ↓
+>
+> ![Apartado 7](/img/apartado7.1.png)
+> 
+> Resultado de la querys de este apartado ↓
+> 
+> ![Apartado 7](/img/apartado7.2.png)
 
 ## Apartado 8 
 
