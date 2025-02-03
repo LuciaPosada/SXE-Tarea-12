@@ -81,7 +81,7 @@ on a.partner_id=r.id
        order by a.invoice_date desc;
 ```
 
-> Resultado de la querys de este apartado↓
+> Resultado de la querys de este apartado ↓
 >
 > ![Apartado 5](/img/apartado5.png)
 
@@ -103,6 +103,10 @@ on a.partner_id=r.id
        group by r.name
        having count(*) > 2
 ```
+
+> Resultado de la querys de este apartado ↓
+>
+> ![Apartado 6](/img/apartado6.png)
 
 ## Apartado 7
 
