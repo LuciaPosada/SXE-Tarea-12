@@ -1,6 +1,6 @@
 > [!WARNING]
 >
-> El apartado 4 tiene una consulta incompleta, la consulta del apatrtado 6 no da los resultados esperado y los apartados 7 y 8 les faltan sus respectivas imagenes
+> El apartado 4 tiene una consulta incompleta, la consulta del apatrtado 6 no da los resultados esperado y al apartado 8 le faltan sus respectivas imagenes
 
 ## Apartado 1 
 
@@ -76,7 +76,7 @@ SELECT r.name,
        a.amount_untaxed_signed
 from res_partner r
 left join account_move a
-       on a.partner_id=r.id
+on a.partner_id=r.id
        where a.move_type='in_refund'
        order by a.invoice_date desc;
 ```
@@ -93,14 +93,15 @@ Consulta:
 
 ```bash
 SELECT r.name,
-	   count(a.id) as num_facturas,
-	   sum(a.amount_untaxed_signed) as total_sin_impuestos
+       count(a.id) as num_facturas,
+       sum(a.amount_untaxed_signed) as total_sin_impuestos
 from res_partner r 
-join account_move a on a.partner_id=r.id 
-	   where a.move_type='out_invoice' 
-	   and state='posted'
-	   group by r.name
-	   having count(*) > 2
+join account_move a
+on a.partner_id=r.id 
+       where a.move_type='out_invoice' 
+       and state='posted'
+       group by r.name
+       having count(*) > 2
 ```
 
 ## Apartado 7
@@ -130,4 +131,12 @@ Consulta:
 ```bash
 DELETE from res_partner where commercial_company_name='Ready Mat' and is_company=FALSE;
 ```
+
+> Entradas de la BD antes de la consulta ↓
+>
+> ![Apartado 8](/img/apartado8.1.png)
+> 
+> Resultado de la querys de este apartado ↓
+> 
+> ![Apartado 8](/img/apartado8.2.png)
 
