@@ -81,7 +81,7 @@ on a.partner_id=r.id
        order by a.invoice_date desc;
 ```
 
-> Resultado de la querys de este apartado↓
+> Resultado de la querys de este apartado ↓
 >
 > ![Apartado 5](/img/apartado5.png)
 
@@ -93,8 +93,8 @@ Consulta:
 
 ```bash
 SELECT r.name,
-       count(a.id) as num_facturas,
-       sum(a.amount_untaxed_signed) as total_sin_impuestos
+       count(distinct a.name) as num_facturas,
+       sum(distinct a.amount_untaxed_signed) as total_sin_impuestos
 from res_partner r 
 join account_move a
 on a.partner_id=r.id 
@@ -103,6 +103,10 @@ on a.partner_id=r.id
        group by r.name
        having count(*) > 2
 ```
+
+> Resultado de la querys de este apartado ↓
+>
+> ![Apartado 6](/img/apartado6.png)
 
 ## Apartado 7
 
